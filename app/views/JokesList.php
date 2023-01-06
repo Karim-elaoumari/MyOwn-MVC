@@ -1,4 +1,4 @@
-<a href="public/create.php">create</a>
+<a href="create">create</a>
 <table class="table">
   <thead>
     <tr>
@@ -14,7 +14,9 @@
       <th scope="row">1</th>
       <td><?= $joke["value"]?></td>
       <td><?= $joke["datetime"]?></td>
-      <td><a href="" class="btn btn-primary">Update</a><a href="" class="btn btn-danger">Delete</a></td>
+      <form action="update" method="post">
+        <input type="hidden" value="<?=$joke["id"]?>" name="id">
+      <td><button class="btn btn-primary">Update</button><a href="delete/<?=$joke["id"]?>" class="btn btn-danger">Delete</a></td></form>
     </tr>
     <?php }?>
   </tbody>

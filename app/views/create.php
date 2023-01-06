@@ -1,14 +1,11 @@
 
-<form class="row g-3">
+<form  anction="" method="POST" class="row g-3">
+ 
   <div class="col-auto">
-    <label for="staticEmail2" class="visually-hidden">Email</label>
-    <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+    <label for="inputPassword2" class="visually-hidden">Joke Text</label>
+    <input type="text" class="form-control" placeholder="type your joke" name="jokeValue">
   </div>
   <div class="col-auto">
-    <label for="inputPassword2" class="visually-hidden">Password</label>
-    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-  </div>
-  <div class="col-auto">
-    <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+    <button type="submit" class="btn btn-primary mb-3" name="createJoke">Create</button>
   </div>
 </form>

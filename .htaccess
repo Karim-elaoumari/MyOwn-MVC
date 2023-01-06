@@ -1,6 +1,11 @@
 
-DirectoryIndex public/index.php
+Options All -Indexes
 
+RewriteEngine On
 
-RewriteEngine On 
-RewriteRule ^create/$ public/create.php
+RewriteBase /MyOwn-MVC/
+RewriteRule ^([a-zA-Z0-9-z\-\_]+)$ index.php?page=$1
+RewriteRule ^([a-zA-Z0-9-z\-\_]+)/$ index.php?page=$1
+RewriteRule ^([a-zA-Z0-9-z\-\_]+)/([a-zA-Z0-9-z\-\_]+)$ index.php?page=$1&action=$2
+RewriteRule ^([a-zA-Z0-9-z\-\_]+)/([a-zA-Z0-9-z\-\_]+)/$ index.php?page=$1&action=$2
+
